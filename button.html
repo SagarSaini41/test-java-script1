@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #colorButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="colorButton">Change Background Color</button>
+
+    <script>
+        document.getElementById('colorButton').addEventListener('click', function() {
+           
+            const colors = ['#FF6347', '#3CB371', '#1E90FF', '#FFD700', '#FF69B4'];
+            
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+           
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
